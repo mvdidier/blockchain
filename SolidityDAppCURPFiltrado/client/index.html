@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DApp | Generador curps</title>
+  <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./main.css" />
+  <!-- Google icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-body bg-dark rounded-0 mb-4">
+          <h1>
+            <span class="material-icons"> grid_view </span>
+            DApp Curp
+          </h1>
+          <h6 class="text-muted">Blockchain</h6>
+          <div class="d-flex align-items-center">
+            <span class="material-icons"> account_balance_wallet </span>
+            <span class="ms-2">Wallet</span>
+          </div>
+          <span id="account"></span>
+        </div>
+
+        <form id="taskForm" class="card card-body bg-dark">
+          <h4>Datos</h4>
+          <input type="text" id="nombres" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+            placeholder="Nombres" autofocus />
+
+          <input type="text" id="amaterno" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+            placeholder="Apellido paterno" autofocus />
+
+          <input type="text" id="apaterno" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+            placeholder="Apellido materno" autofocus />
+
+          <input type="text" id="fechaNacimiento" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+            placeholder="Fecha de nacimiento" autofocus />
+
+          <input type="text" id="genero" class="form-control bg-dark border-0 rounded-0 text-light my-4"
+            placeholder="Género" autofocus />
+
+          <!--Combo box para los estados-->
+          <select class="form-control bg-dark border-0 rounded-0 text-light my-4" name="estados" id="estado">
+            <option value="1">Aguascalientes</option>
+            <option value="2">Baja California</option>
+            <option value="3">Baja California Sur</option>
+            <option value="4">Campeche</option>
+            <option value="5">Coahuila de Zaragoza</option>
+            <option value="6">Colima</option>
+            <option value="7">Chiapas</option>
+            <option value="8">Chihuahua</option>
+            <option value="9">Distrito Federal</option>
+            <option value="10">Durango</option>
+            <option value="11">Guanajuato</option>
+            <option value="12">Guerrero</option>
+            <option value="13">Hidalgo</option>
+            <option value="14">Jalisco</option>
+            <option value="15">México</option>
+            <option value="16">Michoacán de Ocampo</option>
+            <option value="17">Morelos</option>
+            <option value="18">Nayarit</option>
+            <option value="19">Nuevo León</option>
+            <option value="20">Oaxaca</option>
+            <option value="21">Puebla</option>
+            <option value="22">Querétaro de Arteaga</option>
+            <option value="23">Quintana Roo</option>
+            <option value="24">San Luis Potosí</option>
+            <option value="25">Sinaloa</option>
+            <option value="26">Sonora</option>
+            <option value="27">Tabasco</option>
+            <option value="28">Tamaulipas</option>
+            <option value="29">Tlaxcala</option>
+            <option value="30">Veracruz de Ignacio de la Llave</option>
+            <option value="31">Yucatán</option>
+            <option value="32">Zacatecas</option>
+            <option value="33">Entidad Federativa No Especificada</option>
+            <option value=""></option>
+          </select>
+          <button class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
+      <div class="col-md-8">
+        <div id="tasksList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="/libs/web3/dist/web3.min.js"></script> -->
+  <script src="/libs/@truffle/contract/browser-dist/truffle-contract.min.js"></script>
+  <script src="./app.js"></script>
+  <script src="./ui.js"></script>
+</body>
+
+</html>
